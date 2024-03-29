@@ -1,0 +1,389 @@
+body {
+  margin: 0;
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Page
+===============*/
+
+.page {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  background: linear-gradient(rgba(7, 48, 93, 0.87), rgba(19, 52, 87, 0.87)),
+    url('../img/background.jpg') center no-repeat;
+  background-size: cover;
+}
+
+/* Header
+===============*/
+
+.header {
+  padding-top: 40px;
+}
+
+.header-brand {
+  position: relative; /* Для корректного позиционирования псевдоэлементов */
+  padding: 8.5px 0;
+}
+
+.header-brand::before,
+.header-brand::after {
+  content: ''; /* Добавляем контент для псевдоэлементов */
+  position: absolute; /* Позиционируем псевдоэлементы абсолютно */
+  left: 0; /* Размещаем псевдоэлементы в левом краю */
+  width: 100%; /* Задаем ширину псевдоэлементов на 100% от родительского элемента */
+  height: 1px; /* Задаем высоту линии */
+  background-color: white; /* Задаем цвет линии */
+}
+
+.header-brand::before {
+  top: 0; /* Размещаем верхнюю линию в верхнем краю */
+}
+
+.header-brand::after {
+  bottom: 0; /* Размещаем нижнюю линию в нижнем краю */
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav-link {
+  margin-left: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+
+  transition: color 0.2s linear;
+}
+
+.header-nav-link:hover {
+  color: rgb(172, 207, 236);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-contact {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact img {
+  margin-right: 15px; /* Расстояние между изображением и текстом */
+}
+
+.header-contacts-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+
+  text-decoration: none;
+}
+
+.header-contacts-link:hover {
+  text-decoration: underline;
+}
+
+/* Content
+===============*/
+
+.content {
+  margin-top: 175px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.title {
+  margin-bottom: 53px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 65px;
+  color: white;
+
+  text-transform: uppercase;
+  line-height: 88px;
+}
+
+.text {
+  margin-left: 24px;
+  margin-bottom: 64px;
+
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 24px;
+
+  position: relative; /* Устанавливаем позицию относительно для .text */
+}
+
+.text::before {
+  content: ''; /* Добавляем контент для псевдоэлемента */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  top: 0; /* Размещаем псевдоэлемент в верхней части контейнера .text */
+  left: -23px; /* Располагаем слева от текста */
+  width: 1px; /* Ширина линии */
+  height: 100%; /* Высота линии, чтобы она растягивалась на всю высоту контейнера .text */
+  background-color: white; /* Цвет линии */
+}
+
+/* Btn
+===============*/
+
+.btn {
+  display: inline-block;
+  padding: 25px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+
+  color: #07305d;
+  background-color: white;
+  border-color: white;
+}
+
+.btn-active {
+  display: inline-block;
+  margin-left: 40px;
+  padding: 25px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+
+  color: #07305d;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+/* Author
+===============*/
+
+.author {
+  position: absolute;
+
+  right: 211px;
+  bottom: 0;
+}
+
+/* Footer
+===============*/
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 43px;
+  left: 0;
+}
+
+.footer-inner {
+  margin-left: 24px;
+  display: flex;
+  justify-content: flex-start; /* Выравнивание слева */
+  align-items: center;
+  gap: 230px; /* Добавляем промежуток */
+}
+
+.footer-inner::before {
+  content: ''; /* Добавляем контент для псевдоэлемента */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  top: 0; /* Размещаем псевдоэлемент в верхней части контейнера .text */
+  left: -23px; /* Располагаем слева от текста */
+  width: 1px; /* Ширина линии */
+  height: 100%; /* Высота линии, чтобы она растягивалась на всю высоту контейнера .text */
+  background-color: white; /* Цвет линии */
+}
+
+.date,
+.gbp {
+  display: inline-block; /* Чтобы gap работал */
+
+  position: relative;
+}
+
+.gbp::before,
+.date::before {
+  content: ''; /* Добавляем контент для псевдоэлемента */
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  top: 0; /* Размещаем псевдоэлемент в верхней части контейнера .gbp и .date */
+  left: -23px; /* Располагаем слева от элемента */
+  width: 1px; /* Ширина линии */
+  height: 100%; /* Высота линии, чтобы она растягивалась на всю высоту контейнера .gbp и .date */
+  background-color: white; /* Цвет линии */
+}
+
+.footer-count {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+
+  color: white;
+}
+
+.footer-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.5;
+
+  color: white;
+}
+
+/* Дополнительное окно */
+.consultation-window {
+  position: fixed;
+  top: 0;
+  left: -612px;
+  width: 612px;
+  height: 100vh;
+  background-color: rgba(15, 29, 69, 1);
+  z-index: 1000;
+  padding: 40px 32px 174px 75px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  position: relative; /* Добавлено позиционирование */
+}
+
+/* Стили для формы */
+#consultationForm {
+  margin-top: 66px;
+}
+
+#consultationForm input[type='text'],
+#consultationForm input[type='tel'] {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.8); /* Цвет текста */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  width: 480px;
+  height: 36px;
+  margin-bottom: 65px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+
+/* Стилизация начальных надписей в инпутах */
+#consultationForm input[type='text']::placeholder,
+#consultationForm input[type='tel']::placeholder {
+  /* Ваши стили для начальных надписей */
+  color: rgba(255, 255, 255, 0.8); /* Цвет текста */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#consultationForm input[type='text']:focus::placeholder,
+#consultationForm input[type='tel']:focus::placeholder {
+  color: transparent;
+}
+
+.consultatuion-window-title {
+  margin-top: 68px;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+
+  color: #fff;
+}
+
+.close-button {
+  position: absolute; /* Изменили позиционирование */
+  top: 40px; /* Отступ сверху */
+  right: 40px; /* Отступ справа */
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.close-button::before,
+.close-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform-origin: center;
+}
+
+.close-button::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.consultation-window-label {
+  color: rgba(255, 255, 255, 1); /* Цвет текста */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.consultation-window-btn {
+  margin-top: 90px;
+
+  display: inline-block;
+  padding: 25px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 18px;
+
+  color: #07305d;
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
